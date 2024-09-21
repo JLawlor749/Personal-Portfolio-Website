@@ -1,0 +1,48 @@
+body{
+
+    background-image: url('../Images/background4.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #333
+
+}
+
+
+
+.navbar{
+    background-color: #333;
+    color: white;
+}
+
+
+
+#tempCard{
+
+    background: rgba( 187, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13px );
+    -webkit-backdrop-filter: blur( 13px );
+    border-radius: 20px;
+
+    text-align: center;
+    margin-top: 40vh;
+    width: 50vh;
+}
+
+
+
+#tempMessage{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: 'Arial';
+    color: rgb(255, 255, 255);
+}
+
+
+
+#constructionLogo{
+    width: 100%;
+    margin: 20%;
+}
