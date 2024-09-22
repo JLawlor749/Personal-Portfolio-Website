@@ -1,11 +1,13 @@
 body{
 
-    background-image: url('../Images/background5.png');
+    background-image: url('../Images/background6.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #333
+    background-color: #333;
+
+    font-family: 'Arial';
 
 }
 
@@ -13,6 +15,29 @@ body{
 
 .navbar{
     background: #333
+}
+
+
+
+.navbar-toggler{
+    background-color: #333;
+    color: rgb(34, 208, 187);
+    outline-color: rgb(34, 208, 187);
+    
+}
+
+
+
+.navbar-toggler-icon{
+    filter: sepia(200%) saturate(800%) brightness(800%) hue-rotate(100deg);
+}
+
+
+
+.nav-button{
+    color: white;
+    background-color: #22d0bb;
+    border: #333;
 }
 
 
@@ -31,29 +56,27 @@ body{
 
 #tempCard{
 
-    background: rgba( 187, 255, 255, 0.25 );
+    background: rgba( 187, 255, 255, 0.2 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 13px );
-    -webkit-backdrop-filter: blur( 13px );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
     border-radius: 20px;
 
     text-align: center;
     margin-top: 10vh;
     margin-bottom: 10vh;
-    width: 55vh;
+    width: fit-content;
 }
 
 
 
 #tempMessage{
-    margin-top: 2vh;
-    font-family: 'Arial';
+    margin-top: 6vh;
     color: rgb(255, 255, 255);
 }
 
 
 
 #constructionLogo{
-    width: 100%;
-    margin: 20vw;
+    width: 20vh;
 }
