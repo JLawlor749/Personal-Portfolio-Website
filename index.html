@@ -16,11 +16,32 @@
 <body>
     <header>
 
-        <nav class="navbar">
-            <div class="container">
-              <a class="navbar-brand" href="#">
-                <img src="Images/" alt="Bootstrap">
-              </a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="Images/lowResLogo.png" alt="Logo - James Lawlor Computer Science Student" id="mainLogo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/JLawlor749">
+                                <img src="Images/GitHubLogo.png" alt="Github" class="imgLink">
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/james-lawlor-2461282ba/">
+                                <img src="Images/LinkedInLogo.png" alt="Linkedin" class="imgLink">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </nav>
 
@@ -35,14 +56,15 @@
                 <div class="card" id="tempCard">
 
 
-                    <div class="row">
-                            <div class="col-4">
-                                <img src="Images/construction.png" alt="Image of a construction symbol." id="constructionLogo">
-                            </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <img class="card-img" src="Images/construction.png" alt="Image of a construction logo.">
+                        </div>
 
-                            <div class="col-8" id="tempMessage">
-                                <h1>Under Construction!</h1>
-                            </div>
+                        <div class="col-lg-8" id="tempMessage">
+                            <h1 class="card-title">Under Construction!</h1>
+                        </div>
+
                     </div>
 
 
