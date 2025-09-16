@@ -1,6 +1,6 @@
 body{
 
-    background-image: url('../Images/background6.png');
+    background-image: url('../Images/background5.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -42,6 +42,15 @@ body{
 
 
 
+.readMoreButton{
+    color: white;
+    background-color: #22d0bb;
+    border: #333;
+    width: 75%;
+}
+
+
+
 .imgLink{
     height: 7.5vh;
 }
@@ -60,28 +69,34 @@ body{
 
 
 
-#mainLogo{
-    width: 30vh;
+.cardImg{
+    width: 100%;
 }
 
 
 
-#tempCard{
+.cardBody{
+    margin: 2%;
+}
 
-    background: rgba( 187, 255, 255, 0.2 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+
+.tempCard{
+
+    background: rgba( 187, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 34, 208, 187, 0.37 );
     backdrop-filter: blur( 10px );
     -webkit-backdrop-filter: blur( 10px );
     border-radius: 20px;
+    color: white;
 
     text-align: center;
     margin: 5vh;
-    width: fit-content;
+    width: 80%;
 }
 
 
 
-
-#constructionLogo{
-    width: 90%;
+#mainLogo{
+    width: 30vh;
 }
