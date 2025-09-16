@@ -48,6 +48,18 @@ body{
 
 
 
+.mainCardRow{
+    width: fit-content;
+}
+
+
+
+.cardTitle{
+    width: 100%;
+}
+
+
+
 #mainLogo{
     width: 30vh;
 }
@@ -63,20 +75,13 @@ body{
     border-radius: 20px;
 
     text-align: center;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin: 5vh;
     width: fit-content;
 }
 
 
 
-#tempMessage{
-    margin-top: 6vh;
-    color: rgb(255, 255, 255);
-}
-
-
 
 #constructionLogo{
-    width: 20vh;
+    width: 90%;
 }
