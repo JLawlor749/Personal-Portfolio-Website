@@ -1,4 +1,4 @@
-body{
+.mainBody{
 
     background-image: url('../Images/background5.png');
     background-repeat: no-repeat;
@@ -9,6 +9,17 @@ body{
 
     font-family: 'Arial';
 
+}
+
+.wordsleBody{
+    background-image: url('../Images/background5.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #333;
+
+    font-family: 'Arial';
 }
 
 
@@ -97,6 +108,118 @@ body{
 
 
 
+.wordsleCard{
+
+    background: rgba( 187, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 34, 208, 187, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 5px;
+    color: white;
+
+    text-align: center;
+    margin: 2.5%;
+    margin-top: 2.5vh;
+    width: 90%;
+}
+
+
+
+.wordsleLetter{
+    width: 100%;
+    font-size: 500%;
+}
+
+
+
+.wordsleMainBody{
+    width: 65%;
+}
+
+
+
 #mainLogo{
     width: 30vh;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1400px) {
+    .wordsleLetter{
+        width: 100%;
+        font-size: 400%;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .wordsleLetter{
+        width: 100%;
+        font-size: 325%;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .wordsleLetter{
+        width: 100%;
+        font-size: 250%;
+    }
+
+    .wordsleMainBody{
+        width: 65%;
+    }   
+
+    .wordsleCard{
+        margin: 2.5%;
+        margin-top: 2.5vh;
+    }   
+    
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .wordsleLetter{
+        width: 100%;
+        font-size: 175%;
+    }
+
+    .wordsleMainBody{
+        width: 80%;
+    }
+
+    .wordsleCard{
+        margin: 1.5%;
+        margin-top: 4.5vh;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 6000x) {
+    .wordsleLetter{
+        width: 100%;
+        font-size: 125%;
+    }
+
+    .wordsleMainBody{
+        width: 100%;
+    }
+
+    .wordsleCard{
+        margin: 0.5%;
+        margin-top: 6.5vh;
+    }
+
 }
