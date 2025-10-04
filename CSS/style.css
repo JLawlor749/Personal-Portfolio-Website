@@ -127,7 +127,7 @@
 
 .wordsleLetter{
     width: 100%;
-    font-size: 500%;
+    font-size: 420%;
 }
 
 
@@ -143,7 +143,33 @@
 }
 
 
+#wordsleInputCard{
+    background: rgba( 187, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 34, 208, 187, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 5px;
+    color: white;
 
+    height: fit-content;
+    text-align: center;
+    margin: 2.5%;
+    margin-top: 4vh;
+    width: 90%;
+}
+
+
+#wordsleInput{
+    background: rgba( 255, 255, 255, 0 );
+    color: white;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 300%;
+    text-align: center;
+    vertical-align: middle;
+}
 
 
 
@@ -151,6 +177,10 @@
     .wordsleLetter{
         width: 100%;
         font-size: 400%;
+    }
+
+    #wordsleInput{
+        font-size: 280%;
     }
 
 
@@ -162,6 +192,10 @@
     .wordsleLetter{
         width: 100%;
         font-size: 325%;
+    }
+
+    #wordsleInput{
+        font-size: 227.5%;
     }
 
 
@@ -183,6 +217,10 @@
         margin: 2.5%;
         margin-top: 2.5vh;
     }   
+
+    #wordsleInput{
+        font-size: 175%;
+    }
     
 }
 
@@ -203,23 +241,32 @@
         margin-top: 4.5vh;
     }
 
+    #wordsleInput{
+        font-size: 122.5%;
+    }
+
 }
 
 
 
-@media only screen and (max-width: 6000x) {
+@media only screen and (max-width: 600px) {
     .wordsleLetter{
         width: 100%;
         font-size: 125%;
     }
 
     .wordsleMainBody{
-        width: 100%;
+        width: 90%;
     }
 
     .wordsleCard{
         margin: 0.5%;
         margin-top: 6.5vh;
+        width: 100%;
+    }
+
+    #wordsleInput{
+        font-size: 87.5%;
     }
 
 }
