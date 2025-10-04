@@ -58,6 +58,14 @@
     background-color: #22d0bb;
     border: #333;
     width: 75%;
+    margin-bottom: 3%;
+}
+
+
+
+.readMoreButton:hover{
+    box-shadow: 0px 0px 30px 8px rgba(42, 255, 230, 0.5);
+    background-color: #22d0bb;
 }
 
 
