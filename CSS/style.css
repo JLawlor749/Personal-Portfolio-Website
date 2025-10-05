@@ -103,7 +103,7 @@
 .tempCard{
 
     background: rgba( 187, 255, 255, 0.25 );
-    box-shadow: 0 0px 32px 5px rgba( 34, 208, 187, 0.37 );
+    box-shadow: 0px 0px 32px 5px rgba( 34, 208, 187, 0.37 );
     backdrop-filter: blur( 10px );
     -webkit-backdrop-filter: blur( 10px );
     border-radius: 20px;
@@ -119,11 +119,11 @@
 .wordsleCard{
 
     background: rgba( 187, 255, 255, 0.5 );
-    box-shadow: 0 0px 32px 2px rgba( 34, 208, 187, 0.37 );
+    box-shadow: 0px 0px 32px 2px rgba( 34, 208, 187, 0.37 );
     backdrop-filter: blur( 10px );
     -webkit-backdrop-filter: blur( 10px );
     border-radius: 5px;
-    color: white;
+    color: rgba(255, 255, 255, 0);
 
     text-align: center;
     margin: 2.5%;
@@ -146,6 +146,13 @@
 
 
 
+.cardText{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+
 #mainLogo{
     width: 30vh;
 }
@@ -153,7 +160,7 @@
 
 #wordsleInputCard{
     background: rgba( 187, 255, 255, 0.5 );
-    box-shadow: 0 8px 32px 0 rgba( 34, 208, 187, 0.37 );
+    box-shadow: 0px 0px 32px 4px rgba( 34, 208, 187, 0.37 );
     backdrop-filter: blur( 10px );
     -webkit-backdrop-filter: blur( 10px );
     border-radius: 5px;
@@ -180,6 +187,35 @@
 }
 
 
+#wordsleButton{
+    color: white;
+    background-color: #22d0bb;
+    border: #333;
+    height: 60%;
+    margin-bottom: 3%;
+    font-size: 300%;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 4vh;
+    margin-right: 3vh;
+    width: 100%;
+}
+
+
+
+#wordsleButton:hover{
+    box-shadow: 0px 0px 30px 8px rgba(42, 255, 230, 0.5);
+    background-color: #22d0bb;
+}
+
+
+
+#wordsleButton:active{
+    box-shadow: 0px 0px 30px 8px rgba(0, 255, 225, 0.5);
+    background-color: #00ffe1;
+}
+
+
 
 @media only screen and (max-width: 1400px) {
     .wordsleLetter{
@@ -189,6 +225,10 @@
 
     #wordsleInput{
         font-size: 280%;
+    }
+
+    #wordsleButton{
+        font-size: 280%;       
     }
 
 
@@ -204,6 +244,10 @@
 
     #wordsleInput{
         font-size: 227.5%;
+    }
+
+    #wordsleButton{
+        font-size: 227.5%;      
     }
 
 
@@ -233,6 +277,12 @@
     .navbar-nav{
         align-items: center;
     }
+
+    #wordsleButton{
+        font-size: 175%;  
+    }
+
+
 }
 
 
@@ -255,6 +305,11 @@
     #wordsleInput{
         font-size: 122.5%;
     }
+
+    #wordsleButton{
+        font-size: 122.5%;        
+    }
+
 
 }
 
@@ -280,4 +335,18 @@
         font-size: 87.5%;
     }
 
+    #wordsleButton{
+        font-size: 87.5%;  
+        width: fit-content; 
+    }
+
+}
+
+
+
+@media only screen and (max-width: 400px){
+    #wordsleButton{
+        font-size: 80%;  
+        width: fit-content;
+    }
 }
