@@ -1,6 +1,11 @@
 const inputBox = document.getElementById("wordsleInput");
 const inputCard = document.getElementById("wordsleInputCard");
 
+const statusTitle = document.getElementById("wordsleStatusTitle");
+const statusText = document.getElementById("wordsleStatusText");
+const statusButton = document.getElementById("wordsleStatusButton");
+const statusBox = document.getElementById("wordsleStatusBox");
+
 const submitButton = document.getElementById("wordsleButton");
 
 const rowOne = document.getElementById("wordsleR1");
@@ -62,7 +67,7 @@ function validateInput()
         }
     }
 
-    if(text.length == 5 && wrongLetters == false)
+    if(text.length == 5)
     {
         return true;
     }
@@ -83,6 +88,50 @@ function validateInput()
 
         return false;
     }
+}
+
+
+
+function closeStatus()
+{
+    statusBox.style.zIndex = -1;
+    statusBox.style.visibility = "hidden";
+    statusButton.disabled = true;
+}
+
+
+
+function doWin()
+{
+    statusBox.style.zIndex = 49;
+    statusBox.style.visibility = "visible";
+    statusButton.disabled = false;
+
+    if(guesses == 5)
+    {
+        winningText = "You used " + (6 - guesses) + " guess.";
+    }
+    else
+    {
+        winningText = "You used " + (6 - guesses) + " guesses.";
+    }
+
+    statusTitle.innerHTML = "You Win!"
+    statusText.innerHTML = winningText;
+}
+
+
+
+function doLose()
+{
+    statusBox.style.zIndex = 49;
+    statusBox.style.visibility = "visible";
+    statusButton.disabled = false;
+
+    losingText = "The correct word was " + todaysWord + ".";
+
+    statusTitle.innerHTML = "You Lose!";
+    statusText.innerHTML = losingText;
 }
 
 
@@ -192,8 +241,17 @@ function check_word(word, target_word)
 
     guesses -= 1
 
-    console.log(goal_checklist)
-    console.log(guess_print)
+    if(word == target_word)
+    {
+        won = true;
+        doWin();
+    }
+
+    else if(guesses == 0)
+    {
+        lost = true;
+        doLose()
+    }
     
 }
 
@@ -206,7 +264,7 @@ function getInput()
     let text = inputBox.value;
     text = text.toUpperCase();
 
-    if(check == true && guesses > 0)
+    if(check == true && guesses > 0 && won == false && lost == false)
     {
         check_word(text, todaysWord);
     }
@@ -223,4 +281,8 @@ inputBox.addEventListener("keydown", function (e) {
         getInput();
     }
 });
+
+statusButton.addEventListener("click", function (e) {
+        closeStatus();
+})
 

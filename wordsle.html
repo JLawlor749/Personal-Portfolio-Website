@@ -480,7 +480,7 @@
 
                     <div class="row justify-content-center">
                         <div class="col-lg cardBody">
-                            <input id="wordsleInput" type="text" maxlength="5" placeholder="Guess a letter..." autocapitalize="on"></input>
+                            <input id="wordsleInput" type="text" maxlength="5" placeholder="Guess a word..." autocapitalize="on"></input>
                         </div>
                     </div>
 
@@ -490,9 +490,22 @@
 
             <div class="col-2 d-flex justify-content-center">
 
-                <button type="button" class="btn btn-primary btn-lg btn-block" id="wordsleButton"> ↩ </button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="wordsleButton"> <img id="wordsleSubmit" src="Images/submitIcon.png"></img> </button>
 
             </div>
+        </div>
+
+        <div class="card" id="wordsleStatusBox">
+            <div class="row justify-content-center">
+                <div class="col-lg cardBody">
+                    <h1 id="wordsleStatusTitle">How To Play:</h1>
+                    <h3 id="wordsleStatusText">Type a word in the text box and hit the button to make a guess. Letters in the CORRECT SPOT will turn GREEN.
+                        Letters in the word, but in the WRONG SPOT will turn RED. Letters not in the word will stay GREY.
+                    </h3>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="wordsleStatusButton">Close</button>
+                </div>
+            </div>
+        </div>
 
     </div>
 
