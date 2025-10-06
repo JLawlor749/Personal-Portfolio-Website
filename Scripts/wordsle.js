@@ -35,8 +35,7 @@ let won = false;
 let letters_wrong = [];
 let guesses = 6;
 
-targetWords = ["smash", "fermi", "flame", "larps", "beans", "spiel", "shoot", "songs", "paint", "knight", "bricks", "quirk", "sword", "guess", "blade", "skulls", "nails", "friend", "model", "shine", "track", "shoes", "roses", "silky", "games", "allow", "borne", "tonne", "fangs", "trade", "laser"];
-
+targetWords = ["sword", "beans", "track", "fangs", "blade", "paint", "songs", "brick", "laser", "shine", "skull", "spiel", "games", "borne", "allow", "smash", "shoes", "roses", "fight", "silky", "tonne", "shoot", "guess", "model", "trade", "flame", "nails", "fermi", "quirk", "mends", "larps"];
 todaysDate = new Date();
 currentDay = todaysDate.getUTCDate();
 todaysWord = targetWords[currentDay - 1];
