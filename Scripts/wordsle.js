@@ -236,22 +236,25 @@ function check_word(word, target_word)
         parentCard = allLetters[currentRow][i].parentNode.parentNode.parentNode;
         parentCard.style.color = "white";
 
+        // For some reason the results aren't printing right, adding debug lines.
         if( (guess_print[i])[1] == 2)
         {
             parentCard.style.background = "rgba(100, 255, 131, 0.75)"
             parentCard.style.boxShadow = "0px 0px 32px 6px rgba(0, 255, 26, 0.37)"
+            console.log("green")
             resultRow = resultRow.concat("🟩")
         }
-
         else if( (guess_print[i])[1] == 1)
         {
             parentCard.style.background = "rgba(255, 86, 86, 0.5)";
             parentCard.style.boxShadow = "0px 0px 32px 6px rgba(255, 0, 0, 0.37)";
+            console.log("red")
             resultRow = resultRow.concat("🟥")
         }
 
         else
         {
+            console.log("white")
             resultRow = resultRow.concat("⬜")
         }
 
