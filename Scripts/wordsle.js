@@ -26,6 +26,9 @@ const rowFiveLetters = rowFive.getElementsByClassName("wordsleLetter");
 const rowSix = document.getElementById("wordsleR6");
 const rowSixLetters = rowSix.getElementsByClassName("wordsleLetter");
 
+const resultsSection = document.getElementById("resultsSection");
+const resultRows = resultsSection.getElementsByTagName("h4");
+
 allLetters = [rowOneLetters, rowTwoLetters, rowThreeLetters, rowFourLetters, rowFiveLetters, rowSixLetters];
 
 console.log(allLetters)
@@ -34,6 +37,7 @@ let lost = false;
 let won = false;
 let letters_wrong = [];
 let guesses = 6;
+attemptResult = [];
 
 targetWords = ["sword", "beans", "track", "fangs", "blade", "paint", "songs", "brick", "laser", "shine", "skull", "spiel", "games", "borne", "allow", "smash", "shoes", "roses", "fight", "silky", "tonne", "shoot", "guess", "model", "trade", "flame", "nails", "fermi", "quirk", "mends", "larps"];
 todaysDate = new Date();
@@ -94,6 +98,7 @@ function closeStatus()
 {
     statusBox.style.zIndex = -1;
     statusBox.style.visibility = "hidden";
+    resultsSection.style.visibility = "hidden";
     statusButton.disabled = true;
 }
 
@@ -103,6 +108,7 @@ function doWin()
 {
     statusBox.style.zIndex = 49;
     statusBox.style.visibility = "visible";
+    resultsSection.style.visibility = "visible";
     statusButton.disabled = false;
 
     if(guesses == 5)
@@ -116,6 +122,8 @@ function doWin()
 
     statusTitle.innerHTML = "You Win!"
     statusText.innerHTML = winningText;
+
+    showResults();
 }
 
 
@@ -124,12 +132,15 @@ function doLose()
 {
     statusBox.style.zIndex = 49;
     statusBox.style.visibility = "visible";
+    resultsSection.style.visibility = "visible";
     statusButton.disabled = false;
 
     losingText = "The correct word was " + todaysWord + ".";
 
     statusTitle.innerHTML = "You Lose!";
     statusText.innerHTML = losingText;
+
+    showResults();
 }
 
 
@@ -148,6 +159,7 @@ function check_word(word, target_word)
     guess_print = [];
     positions_checked = [];
     currentRow = 6 - guesses;
+    resultRow = "";
 
     // Create a list containing every letter in the word.  
     for(let i = 0; i < target_word.length; i++)
@@ -228,19 +240,36 @@ function check_word(word, target_word)
         {
             parentCard.style.background = "rgba(100, 255, 131, 0.75)"
             parentCard.style.boxShadow = "0px 0px 32px 6px rgba(0, 255, 26, 0.37)"
+            resultRow = resultRow.concat("🟩")
         }
 
-        if( (guess_print[i])[1] == 1)
+        else if( (guess_print[i])[1] == 1)
         {
             parentCard.style.background = "rgba(255, 86, 86, 0.5)";
             parentCard.style.boxShadow = "0px 0px 32px 6px rgba(255, 0, 0, 0.37)";
+            resultRow = resultRow.concat("🟥")
         }
+
+        else
+        {
+            resultRow = resultRow.concat("⬜")
+        }
+
     }
 
     guesses -= 1
+    attemptResult.push(resultRow)
 
     if(word == target_word)
     {
+        if(guesses > 0)
+        {
+            for(let i = 0; i < guesses; i++)
+            {
+                attemptResult.push("⬜⬜⬜⬜⬜")
+            }
+        }
+
         won = true;
         doWin();
     }
@@ -251,6 +280,17 @@ function check_word(word, target_word)
         doLose()
     }
     
+}
+
+
+
+function showResults()
+{
+    for(let i = 0; i < 6; i++)
+    {
+        resultRows[i].innerHTML = attemptResult[i]
+        resultsSection.style.height = "auto";
+    }
 }
 
 
